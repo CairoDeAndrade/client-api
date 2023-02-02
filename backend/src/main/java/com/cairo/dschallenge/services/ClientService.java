@@ -7,12 +7,15 @@ import java.util.stream.Collectors;
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.cairo.dschallenge.dto.ClientDTO;
 import com.cairo.dschallenge.entities.Client;
 import com.cairo.dschallenge.repositories.ClientRepository;
+import com.cairo.dschallenge.services.exceptions.DatabaseException;
 import com.cairo.dschallenge.services.exceptions.ResourceNotFound;
 
 @Service
@@ -62,5 +65,17 @@ public class ClientService {
 		entity.setIncome(clientDto.getIncome());
 		entity.setBirthDate(clientDto.getBirthDate());
 		entity.setChildren(clientDto.getChildren());
+	}
+
+	public void delete(Long id) {
+		try {
+			repository.deleteById(id);
+		}
+		catch (EmptyResultDataAccessException e) {
+			throw new ResourceNotFound("Id not found: " + id);
+		}
+		catch (DataIntegrityViolationException e) {
+			throw new DatabaseException("Integrity violation");
+		}
 	}
 }
