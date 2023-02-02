@@ -1,0 +1,11 @@
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Lionel Messi', '25545696981', 5000.00, TIMESTAMP WITH TIME ZONE '2022-07-25T13:00:00Z', 3)
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Cristiano Ronaldo', '76825162781', 5500.00, TIMESTAMP WITH TIME ZONE '2022-07-25T13:00:00Z', 0)
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Neymar Junior', '45675438798', 6000.00, TIMESTAMP WITH TIME ZONE '2022-07-25T13:00:00Z', 1)
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Jude Bellingham', '90900875633', 6500.00, TIMESTAMP WITH TIME ZONE '2022-07-25T13:00:00Z', 2)
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Luis Soares', '65784321432', 7000.00, TIMESTAMP WITH TIME ZONE '2022-07-25T13:00:00Z', 3)
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Gabriel Barbosa', '32134546544', 7500.00, TIMESTAMP WITH TIME ZONE '2022-07-25T13:00:00Z', 0)
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Filipe Luis', '98987678791', 8000.00, TIMESTAMP WITH TIME ZONE '2022-07-25T13:00:00Z', 1)
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Alexander Arnold', '90908767888', 8500.00, TIMESTAMP WITH TIME ZONE '2022-07-25T13:00:00Z', 2)
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Erling Halland', '51030985263', 9000.00, TIMESTAMP WITH TIME ZONE '2022-07-25T13:00:00Z', 3)
+INSERT INTO tb_client (name, cpf, income, birth_Date, children) VALUES ('Kylian Mbappe', '89754254356', 9500.00, TIMESTAMP WITH TIME ZONE '2022-07-25T13:00:00Z', 0)
+
