@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,9 +36,31 @@ public class ClientService {
 	
 	@Transactional
 	public ClientDTO insert(ClientDTO clientDto) {
-		Client entity = new Client(clientDto.getName(), clientDto.getCpf(),
-				clientDto.getIncome(), clientDto.getBirthDate(), clientDto.getChildren());
+		Client entity = new Client();
+		updateData(entity, clientDto);
 		entity = repository.save(entity);
 		return new ClientDTO(entity);
+	}
+	
+	@Transactional
+	public ClientDTO update(ClientDTO clientDto, Long id) {
+		try {
+			Client entity = repository.getReferenceById(id);
+			updateData(entity, clientDto);
+			entity = repository.save(entity);
+			return new ClientDTO(entity);
+		} 
+		catch (EntityNotFoundException e) {
+			throw new ResourceNotFound("Id not found: " + id);
+		}
+
+	}
+	
+	private void updateData(Client entity, ClientDTO clientDto) {
+		entity.setName(clientDto.getName());
+		entity.setCpf(clientDto.getCpf());
+		entity.setIncome(clientDto.getIncome());
+		entity.setBirthDate(clientDto.getBirthDate());
+		entity.setChildren(clientDto.getChildren());
 	}
 }
