@@ -8,7 +8,7 @@ Repositório contendo os desafios corrigidos em forma de projetos no curso de es
 - Módulo 05: Consultas ao banco de dados (realizar consultas ao banco de dados com JPA e JPQL, problema das N+1 consultas, consultas nativas com SQL).
 - Módulo 06: Docker, implantação, CI/CD (fundamentos de Docker, imagens e containers, Docker Hub, realizar build e implantação manual de um projeto Spring Boot na AWS, CI/CD com Heroku, AWS e Github Actions).
 
-# Módulo 01 CRUD - Client Webservice
+# Módulo 01 CRUD - Projeto: Client Webservice
 API REST com CRUD completo e busca paginada de Clientes.
 
 ## Tecnologias utilizadas
