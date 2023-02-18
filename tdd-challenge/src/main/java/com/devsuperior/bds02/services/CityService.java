@@ -32,4 +32,9 @@ public class CityService {
 		entity = repository.save(entity);
 		return new CityDTO(entity);
 	}
+	
+	public void deleteById(Long id) {
+		
+		repository.deleteById(id);
+	}
 }
