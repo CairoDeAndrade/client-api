@@ -16,3 +16,13 @@ API REST com CRUD completo e busca paginada de Clientes.
 - JPA, Hibernate
 - H2
 - Postman
+
+# Módulo 02 Testes automatizados - Projeto: TDD (Test-driven development) project
+API REST crunstruída utilizando o método TDD, programando o sistema orientado aos testes já pré-escritos.
+
+## Tecnologias utilizadas
+- Spring Boot
+- JUnit
+- JPA, Hibernate
+- H2
+- Postman
