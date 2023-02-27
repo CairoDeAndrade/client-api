@@ -11,6 +11,8 @@ Repositório contendo os desafios corrigidos em forma de projetos no curso de es
 # Módulo 01 CRUD - Projeto: Client Webservice
 API REST com CRUD completo e busca paginada de Clientes.
 
+Link do projeto: <a href="https://github.com/CairoDeAndrade/ds-projects/tree/main/clients-crud">Client Webservice</a>
+
 ## Tecnologias utilizadas
 - Spring Boot
 - JPA, Hibernate
@@ -19,6 +21,8 @@ API REST com CRUD completo e busca paginada de Clientes.
 
 # Módulo 02 Testes automatizados - Projeto: TDD (Test-driven development) project
 API REST crunstruída utilizando o método TDD, programando o sistema orientado aos testes já pré-escritos.
+
+Link do projeto: <a href="https://github.com/CairoDeAndrade/ds-projects/tree/main/tdd-challenge">TDD project</a>
 
 ## Tecnologias utilizadas
 - Spring Boot
