@@ -1,9 +1,11 @@
 package com.devsuperior.bds04.controllers;
 
 import java.net.URI;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +21,12 @@ public class CityController {
 	
 	@Autowired
 	private CityService service;
+	
+	@GetMapping
+	public ResponseEntity<List<CityDTO>> findAllSortedByName(){
+		List<CityDTO> cities = service.findAllSortedByName();
+		return ResponseEntity.ok().body(cities);
+	}
 	
 	@PostMapping
 	public ResponseEntity<CityDTO> insert(@RequestBody CityDTO cityDto) {
