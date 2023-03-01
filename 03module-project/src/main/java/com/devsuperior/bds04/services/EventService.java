@@ -1,10 +1,8 @@
 package com.devsuperior.bds04.services;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,9 +18,9 @@ public class EventService {
 	private EventRepository repository;
 	
 	@Transactional(readOnly = true)
-	public List<EventDTO> findAllSortedByName() {
-		List<Event> entities = repository.findAll(Sort.by("name"));
-		return entities.stream().map(entity -> new EventDTO(entity)).collect(Collectors.toList());
+	public Page<EventDTO> findAllPaged(Pageable pageable) {
+		Page<Event> entities = repository.findAll(pageable);
+		return entities.map(entity -> new EventDTO(entity));
 	}
 	
 	@Transactional
