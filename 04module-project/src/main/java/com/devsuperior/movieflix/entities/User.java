@@ -1,9 +1,12 @@
 package com.devsuperior.movieflix.entities;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,11 +22,16 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+	
+	@Column(unique = true)
 	private String email;
 	private String password;
 	
 	@OneToMany(mappedBy = "Role")
 	private Set<Role> roles = new HashSet<>();
+	
+	@OneToMany(mappedBy = "user")
+	private List<Review> reviews = new ArrayList<>();
 	
 	public User() {
 	}
@@ -70,6 +78,10 @@ public class User {
 
 	public Set<Role> getRoles() {
 		return roles;
+	}
+
+	public List<Review> getReviews() {
+		return reviews;
 	}
 
 	@Override
