@@ -1,5 +1,6 @@
 package com.devsuperior.movieflix.entities;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -16,7 +17,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_user")
-public class User {
+public class User implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +30,7 @@ public class User {
 	private String email;
 	private String password;
 	
-	@OneToMany(mappedBy = "Role")
+	@OneToMany(mappedBy = "role")
 	private Set<Role> roles = new HashSet<>();
 	
 	@OneToMany(mappedBy = "user")
