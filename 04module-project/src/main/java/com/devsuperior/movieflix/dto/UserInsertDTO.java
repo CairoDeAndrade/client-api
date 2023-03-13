@@ -1,6 +1,6 @@
 package com.devsuperior.movieflix.dto;
 
-import com.devsuperior.bds04.services.validation.UserInsertValid;
+import com.devsuperior.movieflix.services.validation.UserInsertValid;
 
 @UserInsertValid
 public class UserInsertDTO extends UserDTO {

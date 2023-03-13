@@ -1,6 +1,6 @@
 package com.devsuperior.movieflix.dto;
 
-import com.devsuperior.bds04.services.validation.UserUpdateValid;
+import com.devsuperior.movieflix.services.validation.UserUpdateValid;
 
 @UserUpdateValid
 public class UserUpdateDTO extends UserDTO {
