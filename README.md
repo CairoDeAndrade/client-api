@@ -65,7 +65,7 @@ API REST crunstruída utilizando o método TDD.
 ### Competências aplicadas:
 Domínio e ORM (Implementação de um modelo de domínio complexo (projeto DSLearn) e Instanciação (seed) de um modelo de domínio com SQL), autorização customizada em nível de serviço, conteúdo customizado para o usuário logado, refresh token e pré-autorização de métodos
 
-Link do projeto: <a href="https://github.com/CairoDeAndrade/ds-projects/tree/main/03module-project">Events API</a>
+Link do projeto: <a href="https://github.com/CairoDeAndrade/ds-projects/tree/main/04module-project">Movieflix</a>
 
 ## Tecnologias utilizadas
 - Spring Boot
