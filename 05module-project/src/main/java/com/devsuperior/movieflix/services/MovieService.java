@@ -6,7 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devsuperior.movieflix.dto.MovieByGenreDTO;
+import com.devsuperior.movieflix.dto.MovieDTO;
 import com.devsuperior.movieflix.entities.Genre;
 import com.devsuperior.movieflix.entities.Movie;
 import com.devsuperior.movieflix.repositories.GenreRepository;
@@ -18,12 +18,13 @@ public class MovieService {
 	@Autowired
 	private MovieRepository movieRepository;
 	
+	@Autowired
 	private GenreRepository genreRepository;
 	
 	@Transactional
-	public Page<MovieByGenreDTO> findAllPaged(Pageable pageable, Long genreId){
+	public Page<MovieDTO> findAllPaged(Pageable pageable, Long genreId){
 		Genre genre = (genreId == 0) ? null : genreRepository.getOne(genreId);
 		Page<Movie> page = movieRepository.findMovies(genre, pageable);
-		return page.map(movie -> new MovieByGenreDTO(movie));
+		return page.map(movie -> new MovieDTO(movie));
 	}
 }
