@@ -25,6 +25,7 @@ public class MovieService {
 	public Page<MovieDTO> findAllPaged(Pageable pageable, Long genreId){
 		Genre genre = (genreId == 0) ? null : genreRepository.getOne(genreId);
 		Page<Movie> page = movieRepository.findMovies(genre, pageable);
-		return page.map(movie -> new MovieDTO(movie));
+		movieRepository.findMoviesWithGenres(page.getContent());
+		return page.map(movie -> new MovieDTO(movie, movie.getGenre()));
 	}
 }
