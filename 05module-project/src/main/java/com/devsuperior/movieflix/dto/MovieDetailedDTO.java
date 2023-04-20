@@ -93,11 +93,11 @@ public class MovieDetailedDTO implements Serializable{
 		this.synopsis = synopsis;
 	}
 
-	public GenreMinDTO getGenreDto() {
+	public GenreMinDTO getGenre() {
 		return genre;
 	}
 
-	public void setGenreDto(GenreMinDTO genre) {
+	public void setGenre(GenreMinDTO genre) {
 		this.genre = genre;
 	}
 

@@ -82,11 +82,11 @@ public class MovieDTO implements Serializable{
 		this.imgUrl = imgUrl;
 	}
 
-	public GenreMinDTO getGenreDto() {
+	public GenreMinDTO getGenre() {
 		return genre;
 	}
 
-	public void setGenreDto(GenreMinDTO genre) {
+	public void setGenre(GenreMinDTO genre) {
 		this.genre = genre;
 	}
 
