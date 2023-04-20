@@ -20,7 +20,7 @@ public class GenreService {
 	
 	@Transactional
 	public List<GenreMinDTO> findAll(){
-		List<Genre> list = repository.findAll(Sort.by("name"));
+		List<Genre> list = repository.findAll(Sort.by("id"));
 		return list.stream().map(genre -> new GenreMinDTO(genre)).collect(Collectors.toList());
 	}
 }
