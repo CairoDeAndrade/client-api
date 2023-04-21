@@ -11,9 +11,10 @@ public class ReviewDTO {
 	private Long id;
 	
 	@NotBlank(message = "Required field!")
-	private String text;
-	
+	private String text;	
 	private Long movieId;
+	
+	private UserDTO user;
 	
 	public ReviewDTO() {
 	}
@@ -27,6 +28,13 @@ public class ReviewDTO {
 		id = entity.getId();
 		text = entity.getText();
 		movieId = entity.getMovie().getId();
+	}
+	
+	public ReviewDTO(Review entity, UserDTO user) {
+		id = entity.getId();
+		text = entity.getText();
+		movieId = entity.getMovie().getId();
+		this.user = user;
 	}
 
 	public Long getId() {
@@ -51,6 +59,14 @@ public class ReviewDTO {
 
 	public void setMovieId(Long movieId) {
 		this.movieId = movieId;
+	}
+
+	public UserDTO getUser() {
+		return user;
+	}
+
+	public void setUser(UserDTO user) {
+		this.user = user;
 	}
 
 	@Override
