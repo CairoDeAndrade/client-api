@@ -92,3 +92,16 @@ Link do projeto: <a href="https://github.com/CairoDeAndrade/ds-projects/tree/mai
 - H2
 - Postman
 <br>
+  
+ ## Módulo 06 Docker, implantação, CI/CD
+
+### Competências aplicadas:
+Nesse módulo foi aprendido os fundamentos de Docker, imagens e containers, onde foi construída uma imagem docker do projeto dscatalog, ao qual foi armazenada no Docker Hub, e a partir disso, foi instanciado um container com conexão com o banco de dados postgreSQL a fim de conseguir realizar build e implantação manual do projeto Spring Boot no Heroku com CI/CD, e também na AWS com o free tier, utilizando o Github Actions para CI/CD.
+
+### Tecnologias vistas no módulo
+- Spring Boot
+- Docker
+- AWS
+- Github Actions
+- PostgreSqL
+<br>
